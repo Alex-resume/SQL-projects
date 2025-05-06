@@ -1,3 +1,4 @@
+--Written in SQLite
 
 -- 1. Checking Data
 SELECT *
