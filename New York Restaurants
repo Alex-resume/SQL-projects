@@ -1,0 +1,66 @@
+
+-- 1. Checking Data
+SELECT *
+FROM nomnom;
+
+-- 2. What are the distinct neighborhoods?
+SELECT DISTINCT neighborhood
+FROM nomnom;
+-- Brooklyn, Midtown, Chinatown, Uptown, Queens, Downtown
+
+-- 3. What are the distinct cuisine types?
+SELECT DISTINCT cuisine
+FROM nomnom;
+-- Steak, Korean, Chinese, Pizza, Ethiopian, Vegetarian, Italian, Japanese, American, Mediterranean, Indian, Soul Food, Mexican
+
+-- 4. Chinese takeout options:
+SELECT *
+FROM nomnom
+Where cuisine ='Chinese';
+
+-- 5. Reviews above 4
+SELECT *
+FROM nomnom
+Where review >= 4 
+Order by review Desc;
+
+-- 6. High Priced Italian
+Select *
+From nomnom
+Where cuisine ='Italian'
+ And price like '%$$$%';
+
+-- 7. Finding a restaurant with the word "meatball"
+Select *
+From nomnom
+Where name like '%meatball%';
+
+-- 8. Finding a close location
+Select *
+From nomnom
+Where neighborhood = 'Midtown'
+  Or neighborhood = 'Downtown'
+  Or neighborhood = 'Chinatown';
+
+-- 9. Find all the health grade pending restaurants (empty values).
+Select *
+From nomnom
+Where health is null;
+
+-- 10. Create a Top 10 Restaurants Ranking based on reviews.
+Select *
+From nomnom
+Order by review Desc
+limit 10;
+
+-- 11. 'CASE' statement
+Select name,
+Case
+  When review > 4.5 then 'Extraordinary'
+  When review > 4 then 'Excellent'
+  When review > 3 then 'Good'
+  When review > 2 then 'Fair'
+  Else 'poor'
+End as "Review"
+From nomnom
+-- Ensure that column aliases are enclosed in double quotes for consistency and to avoid potential issues with SQL syntax.
