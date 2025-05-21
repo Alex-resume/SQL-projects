@@ -1,4 +1,5 @@
 --SQLite
+-- This excercise is from codeacademy.com
 
 SELECT title, score
 FROM hacker_news
