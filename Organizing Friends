@@ -1,4 +1,5 @@
-In SQLite
+-- This excercise is from codeacademy.com
+-- It is meant to be written with a suitable database with SQL based program
 
 -- 1. Create a table named friends with three columns:
 DROP TABLE celebs;
