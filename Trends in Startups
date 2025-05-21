@@ -1,5 +1,5 @@
--- Written in SQLite
-
+-- This excercise is from codeacademy.com
+-- It is meant to be written with a suitable database with SQL based program
 
 -- 1. Overview of the entire data
 SELECT *
