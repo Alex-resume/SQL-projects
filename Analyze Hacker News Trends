@@ -1,5 +1,5 @@
---SQLite
 -- This excercise is from codeacademy.com
+-- It is meant to be written with a suitable database with SQL based program
 
 SELECT title, score
 FROM hacker_news
